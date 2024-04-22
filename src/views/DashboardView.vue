@@ -27,32 +27,30 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </label>
-    <nav aria-label="Sidebar Navigation" class="peer-checked:w-64 left-0 z-10 flex h-screen w-0 flex-col overflow-hidden bg-gray-700 text-white transition-all md:h-screen md:w-64 lg:w-72">
+    
+    <nav aria-label="Sidebar Navigation" class="peer-checked:w-64 left-0 z-10 flex h-screen w-0 flex-col overflow-hidden bg-gray-500 text-white transition-all md:h-screen md:w-64 lg:w-72">
       <div class="bg-slate-800 mt-5 py-4 pl-10 md:mt-10">
         <span class="">
           <span class="mr-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 align-bottom text-2xl font-bold">U</span>
           <span class="text-xl">MKM</span>
         </span>
-      </div>
+      </div>  
 
       <ul class="mt-8 space-y-3 md:mt-20">
-        <!-- <li class="relative">
-  <router-link to="Kelolakonten" class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-300 focus:outline-none">
-    <span
-      ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 19v-3a2 2 0 012-2h10a2 2 0 012 2v3"></path>
-      </svg></span
-    ><span class="">Kelola Konten</span>
-  </router-link>
-</li> -->
-
-<li class="relative">
+<!-- <li class="relative">
     <router-link to="Kelolatentangkami" class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-300 focus:outline-none">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17v-1c0-2.76-5.24-4.01-6-9 1.01-.33 1.89-.95 2.61-1.83C8.61 6.72 10.28 6 12 6s3.39.72 4.39 2.17c.72.88 1.6 1.5 2.61 1.83-.76 4.99-6 6.24-6 9v1h-2z"/></svg></span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17v-1c0-2.76-5.24-4.01-6-9 1.01-.33 1.89-.95 2.61-1.83C8.61 6.72 10.28 6 12 6s3.39.72 4.39 2.17c.72.88 1.6 1.5 2.61 1.83-.76 4.99-6 6.24-6 9v1h-2z"/>
+        </svg></span>
         <span class="">Tentang Kami</span>
     </router-link >
 </li>
+
+<li class="relative">
+    <router-link to="/Kelolakontak" class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-300 focus:outline-none">
+        <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/></svg></span>
+        <span class="">Kelola Kontak</span>
+    </router-link>
+</li>-->
 
 <li class="relative">
     <router-link to="Kelolaevent" class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-300 focus:outline-none">
@@ -72,12 +70,6 @@
     </router-link>
 </li>
 
-<li class="relative">
-    <router-link to="/Kelolakontak" class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 text-gray-300 focus:outline-none">
-        <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/></svg></span>
-        <span class="">Kelola Kontak</span>
-    </router-link>
-</li>
       </ul> 
 
       <div class="my-6 mt-auto ml-10 flex cursor-pointer">
@@ -87,72 +79,109 @@
         <div class="ml-3">
           <p class="font-medium">Bryan Jason</p>
           <p class="text-sm text-gray-300">Cils, Bandung</p>
-        </div>
-      </div>
-    </nav>
-  </aside>
+        </div>   
+<ul class="mx-auto mt-4 flex space-x-6 sm:mx-5 sm:mt-0">
+  <li class="">
+    <button class="flex h-8 w-8 items-center justify-center rounded-xl border text-gray-600 hover:text-black hover:shadow" 
+    @click="logout">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+    </button>
+  </li>
+</ul>
+    </div>
+  </nav>
+</aside>
   <!-- /Sidebar -->
 
-  <div class="flex h-full w-full flex-col">
-    <!-- Navbar -->
-    <header class="relative flex flex-col items-center bg-white px-4 py-4 shadow sm:flex-row md:h-20">
-      <div class="flex w-full flex-col justify-between overflow-hidden transition-all sm:max-h-full sm:flex-row sm:items-center">
-        <div class="relative ml-10 flex items-center justify-between rounded-md sm:ml-auto">
-          <!-- <svg class="absolute left-2 block h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8" class=""></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65" class=""></line>
-          </svg>
-          <input type="name" name="search" class="h-12 w-full rounded-md border border-gray-100 bg-gray-100 py-4 pr-4 pl-12 shadow-sm outline-none focus:border-blue-500" placeholder="Search for anything" /> -->
-        </div>
-
-        <ul class="mx-auto mt-4 flex space-x-6 sm:mx-5 sm:mt-0">
-          <!-- <li class="">
-            <button class="flex h-8 w-8 items-center justify-center rounded-xl border text-gray-600 hover:text-black hover:shadow">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </button>
-          </li>
-          <li class="">
-            <button class="flex h-8 w-8 items-center justify-center rounded-xl border text-gray-600 hover:text-black hover:shadow">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </button>
-          </li> -->
-          <li class="">
-            <button class="flex h-8 w-8 items-center justify-center rounded-xl border text-gray-600 hover:text-black hover:shadow" 
-            @click="logout">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-            </button>
-          </li>
-        </ul>
+  <div class="text-slate-600 mx-auto grid max-w-2xl grid-cols-2 gap-y-4 px-4 py-1 sm:my-10 sm:rounded-md sm:border sm:shadow">
+  <div class="col-span-2 col-start-1 flex flex-col justify-between border-b py-3 sm:flex-row">
+    <p class="font-medium">Overview</p>
+    <select class="text-slate-500 hover:bg-slate-200 rounded-lg border-2 px-4 py-2 font-medium focus:outline-none focus:ring">
+      <option value="last-month">Last Month</option>
+      <option value="last-month">Last 2 Months</option>
+      <option value="last-month">This Year</option>
+    </select>
+  </div>
+  <div class="col-span-2 -mx-4 bg-gradient-to-t from-indigo-500 to-blue-500 px-4 py-8 sm:col-span-1 sm:mx-0 sm:rounded-xl sm:py-4">
+    <p class="mb-4 font-medium text-indigo-100">Cases in pipeline</p>
+    <div class="mb-6 flex max-w-xs">
+      <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-100 text-indigo-400 sm:mr-3 sm:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+        </svg>
       </div>
-    </header>
-    <!-- /Navbar -->
-
-    <!-- Main -->
-    <div class="h-full overflow-hidden pl-10">
-      <main id="dashboard-main" class="h-[calc(100vh-10rem)] overflow-auto px-4 py-10">
-        <!-- Put your content inside of the <main/> tag -->
-        <h1 class="text-2xl font-black text-gray-800">Good Morning!</h1>
-        <p class="mb-6 text-gray-600">Here's an overview of your monthly transactions.</p>
-        <div class="flex flex-wrap gap-x-4 gap-y-8">
-          <div class="h-56 w-72 rounded-xl bg-white p-10 shadow-md">1</div>
-          <div class="h-56 w-72 rounded-xl bg-white p-10 shadow-md">2</div>
-          <div class="h-56 w-full rounded-xl bg-white p-10 shadow-md">3</div>
-          <div class="h-56 w-full rounded-xl bg-white p-10 shadow-md">3</div>
-          <div class="h-56 w-full rounded-xl bg-white p-10 shadow-md">4</div>
-          <div class="h-56 w-full rounded-xl bg-white p-10 shadow-md">5</div>
-        </div>
-      </main>
+      <div class="px-4">
+        <p class="mb-1 text-2xl font-black text-white">1844</p>
+        <p class="font-medium text-indigo-100">$192,234.00</p>
+      </div>
     </div>
-    <!-- /Main -->
+    <div class="flex flex-wrap justify-between">
+      <div class="flex flex-col items-center px-4 py-1">
+        <p class="text-lg font-medium text-white">232</p>
+        <p class="text-xs font-medium text-indigo-100">Quote</p>
+      </div>
+      <div class="mb-1 flex flex-col items-center px-4 py-1 sm:mr-1 sm:mb-0">
+        <p class="text-lg font-medium text-white">$140</p>
+        <p class="text-xs font-medium text-indigo-100">CAC</p>
+      </div>
+      <div class="mb-1 flex flex-col items-center rounded-2xl bg-white px-4 py-1 sm:mr-1 sm:mb-0">
+        <p class="text-lg font-medium text-indigo-500">21</p>
+        <p class="text-xs font-medium text-indigo-500">Refunds</p>
+      </div>
+      <div class="flex flex-col items-center px-4 py-1">
+        <p class="text-lg font-medium text-white">$44</p>
+        <p class="text-xs font-medium text-indigo-100">PPC</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-span-2 grid grid-cols-2 gap-4 py-4 sm:col-span-1 sm:gap-8 sm:px-4">
+    <div class="">
+      <p class="text-lg font-bold">32</p>
+      <p class="text-slate-400 mb-2 font-medium">$230,000</p>
+      <span class="bg-slate-200 text-slate-600 rounded-full px-2 py-0.5 text-xs font-medium">Drafts</span>
+    </div>
+    <div class="">
+      <p class="text-lg font-bold">621</p>
+      <p class="text-slate-400 mb-2 font-medium">$230,000</p>
+      <span class="rounded-full bg-indigo-200 px-2 py-0.5 text-xs font-medium text-indigo-600">Prending Approval</span>
+    </div>
+    <div class="">
+      <p class="text-lg font-bold">68</p>
+      <p class="text-slate-400 mb-2 font-medium">$230,000</p>
+      <span class="rounded-full bg-yellow-200 px-2 py-0.5 text-xs font-medium text-yellow-700">Sent to Clients</span>
+    </div>
+    <div class="">
+      <p class="text-lg font-bold">970</p>
+      <p class="text-slate-400 mb-2 font-medium">$230,000</p>
+      <span class="rounded-full bg-green-200 px-2 py-0.5 text-xs font-medium text-green-600">Signing</span>
+    </div>
+  </div>
+  <div class="col-span-2 col-start-1 grid grid-cols-2 gap-6 border-t py-4 sm:grid-cols-4 sm:px-4 sm:py-8">
+    <div class="">
+      <p class="text-slate-500 text-sm">Revenue</p>
+      <p class="text-xl font-medium">$924,883</p>
+    </div>
+    <div class="">
+      <p class="text-slate-500 text-sm">Liabilities</p>
+      <p class="text-xl font-medium">$924,883</p>
+    </div>
+    <div class="">
+      <p class="text-slate-500 text-sm">Profit</p>
+      <p class="text-xl font-medium">$213,002</p>
+    </div>
+    <div class="">
+      <p class="text-slate-500 text-sm">Target</p>
+      <p class="text-xl font-medium">$150,000</p>
+    </div>
   </div>
 </div>
+
+</div>
 </template>
+
+
 
 <script>
 export default {

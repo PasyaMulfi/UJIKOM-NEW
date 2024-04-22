@@ -55,7 +55,7 @@
                                 <label class="mb-2 inline-block text-xs font-medium uppercase text-gray-700"
                                     for="password">Password</label> 
                                 <a href="auth-forgot-password-basic.html"
-                                    class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500">
+                                     class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500">
                                     <small class=" ">Forgot Password?</small>
                                 </a>
                             </div>
@@ -84,8 +84,8 @@
   
                     <p class="mb-4 text-center">
                         New on kcstore?
-                        <a href="/register" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500"> Create an
-                            account </a>
+                        <!-- <a href="/register" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500"> Create an
+                            account </a> -->
                     </p>
                 </div>
             </div>

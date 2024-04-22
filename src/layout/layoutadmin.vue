@@ -5,7 +5,7 @@
     </div>
   </template>
   <script setup>
-  import Sidebar from "../admin/slidebar.vue";
+  // import Sidebar from "../admin/slidebar.vue";
   </script>
   <style >
     

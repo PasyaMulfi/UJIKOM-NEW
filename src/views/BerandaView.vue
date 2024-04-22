@@ -18,7 +18,7 @@
       <div class="mx-auto mt-10 max-w-screen-md space-y-12 px-4 py-10 font-serif text-lg tracking-wide text-gray-700">
         <strong class="text-2xl font-medium">Kami menyediakan akses informasi dan sarana penyampaian ilmu melalui program-program yang dapat meningkatkan potensi usaha di masa depan serta memperluas jaringan pemasaran produk pelaku UMKM Indonesia. </strong>
         <p>Melalui kegiatan-kegiatan online dan offline, Sahabat UMKM merupakan wadah yang tepat bagi UMKM Indonesia dalam mengembangkan potensi usahanya</p>
-        <p>Dapatkan akses ke berbagai program pelatihan eksklusi  f dan fasilitasi dari partner strategis khusus untuk anggota komunitas Sahabat UMKM.</p>
+        <p>Dapatkan akses ke berbagai program pelatihan eksklusif dan fasilitasi dari partner strategis khusus untuk anggota komunitas Sahabat UMKM.</p>
       </div>
     </article>
   </main>
@@ -43,7 +43,7 @@
               </svg>
               Marketing</span>
         <router-link to="/detailgaleri1" class="mt-4 mb-3 text-xl font-semibold xl:text-2xl">Meningkatkan Penjualan dengan Teknik Penulisan Deskripsi Produk yang Mengundang Cuan</router-link>
-                <p class="mb-4 text-base font-light">Meningkatkan Penjualan dengan Teknik Penulisan Deskripsi Produk yang Mengundang Cuan</p>
+                <p class="mb-4 text-base font-light">MDeskripsi produk merupakan salah satu elemen penting dalam pemasaran online. Deskripsi produk yang baik dapat membantu meningkatkan penjualan dengan menarik minat calon pembeli.</p>
             <span class="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">Read Now</span>
           </div>
         </a>
@@ -59,7 +59,7 @@
               </svg>
                Public Relations</span>
                <router-link to="/detailgaleri2" class="mt-4 mb-3 text-xl font-semibold xl:text-2xl">Cara Jitu Promosi Produk UMKM dan Bangun Jaringan Bisnis Profesional di LinkedIn</router-link>
-            <p class="mb-4 text-base font-light">Cara Jitu Promosi Produk UMKM dan Bangun Jaringan Bisnis Profesional di LinkedIn</p>
+            <p class="mb-4 text-base font-light">Meningkatkan skala bisnis Usaha Mikro, Kecil, dan Menengah (UMKM) bisa ditempuh dengan banyak cara. Salah satunya, dengan terus melakukan inovasi</p>
             <span class="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">Read Now</span>
           </div>
         </a>
@@ -75,7 +75,7 @@
               </svg>
               Branding</span>
             <router-link to="/detailgaleri3" class="mt-4 mb-3 text-xl font-semibold xl:text-2xl">Inovasi Produk UMKM dengan Metode SCAMPER, Berani Coba?</router-link>
-            <p class="mb-4 text-base font-light">Inovasi Produk UMKM dengan Metode SCAMPER, Berani Coba?</p>
+            <p class="mb-4 text-base font-light">Meningkatkan skala bisnis Usaha Mikro, Kecil, dan Menengah (UMKM) bisa ditempuh dengan banyak cara. Salah satunya, dengan terus melakukan inovasi</p>
             <span class="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">Read Now</span>
           </div>
         </a>

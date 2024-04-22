@@ -1,61 +1,26 @@
 <template>
-    <footer class="bg-gray-50">
-<div class="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 md:grid-cols-2 xl:grid-cols-4 xl:px-10">
-<div class="max-w-sm">
-  <div class="mb-6 flex h-12 items-center space-x-2">
-    <span class="text-2xl font-bold">Bel<span class="text-blue-600">Air</span>.</span>
-  </div>
-  <div class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ad a officia ea expedita!</div>
-</div>
-<div class="">
-  <div class="mt-4 mb-2 font-medium xl:mb-4">Address</div>
-  <div class="text-gray-500">
-    35 Remida Heights, <br />
-    45 Street, <br />
-    South Caroline, US
-  </div>
-</div>
-<div class="">
-  <div class="mt-4 mb-2 font-medium xl:mb-4">Links</div>
-  <nav aria-label="Footer Navigation" class="text-gray-500">
-    <ul class="space-y-3">
-      <li><a class="hover:text-blue-600 hover:underline" href="#">Pricing</a></li>
-      <li><a class="hover:text-blue-600 hover:underline" href="#">Demo</a></li>
-      <li><a class="hover:text-blue-600 hover:underline" href="#">Press</a></li>
-      <li><a class="hover:text-blue-600 hover:underline" href="#">Support Hub</a></li>
-      <li><a class="hover:text-blue-600 hover:underline" href="#">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-<div class="">
-  <div class="mt-4 mb-2 font-medium xl:mb-4">Subscribe to our Newsletter</div>
-  <div class="flex flex-col">
-    <div class="mb-4">
-      <input type="email" class="focus:outline mb-2 block h-14 w-full rounded-xl bg-gray-200 px-4 sm:w-80 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="Enter your email" />
-      <button class="block rounded-xl bg-blue-600 px-6 py-3 font-medium text-white">Subscribe</button>
-    </div>
-  </div>
-</div>
-</div>
-<div class="bg-gray-100">
-<div class="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
-  <div class="">© 2022 BelAir | All Rights Reserved</div>
-  <div class="">
-    <a class="" href="#">Privacy Policy</a>
-    <span>|</span>
-    <a class="" href="#">Terms of Service</a>
-  </div>
-</div>
-</div>
-</footer>
+  <footer class="relative mt-20 bg-gray-900 px-4 pt-20">
+      <div class="absolute -top-10 left-1/2 h-16 w-16 -translate-x-1/2 rounded-xl border-4 border-sky-500 bg-white p-2"><img class="h-full object-contain" src="/src/assets/image/logoumkm.png" alt="" /></div>
+      <nav aria-label="Footer Navigation" class="mx-auto mb-10 flex max-w-lg flex-col gap-10 text-center sm:flex-row sm:text-left">
+          <a href="#" class="font-medium text-white">Demo</a>
+          <a href="#" class="font-medium text-white">Support</a>
+          <a href="#" class="font-medium text-white">Privacy Policy</a>
+          <a href="#" class="font-medium text-white">Terms & Conditions</a>
+      </nav>
+      <p class="py-10 text-center text-gray-300">© 2022 Boleno | All Rights Reserved</p>
+  </footer>
 </template>
 
 <script>
-export default {
-// Logika terkait footer (jika ada) di sini
-}
+  export default {
+      // Logika terkait footer (jika ada) di sini
+  }
 </script>
+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.+3.3.3.3.3.3.
 
 <style scoped>
-/* Gaya terkait footer di sini */
+  /* Gaya terkait footer di sini */
+  .bg-gray-900 {
+      background-color: #635858;
+  }
 </style>
