@@ -1,4 +1,5 @@
 <template>
+   <div class="mt-20">
     <section class="mx-auto my-10 flex max-w-xl flex-col rounded-3xl border p-4 sm:px-16 sm:py-16 lg:max-w-screen-lg lg:flex-row">
   <div class="lg:w-1/2 lg:pr-8">
     <div class="">
@@ -16,5 +17,5 @@
     <img class="border-blue-600/10 rounded-3xl border shadow-md" src="https://sahabatumkm.id/wp-content/uploads/2023/07/bulb-with-speecch-bubbles.jpg" alt="" />
   </div>
 </section>
-
+</div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed top-0 w-full z-50"> 
+    <nav class="fixed top-0 w-full z-50 bg-wood"> 
       <header class="text-slate-700 relative flex max-w-screen-xl flex-col overflow-hidden px-4 py-4 md:mx-auto md:flex-row md:items-center">
         <a href="/" class="flex cursor-pointer items-center whitespace-nowrap text-2xl font-black transition-colors hover:text-cyan-500">
           <span class="mr-2 text-4xl text-cyan-500 transition-transform transform hover:scale-110">

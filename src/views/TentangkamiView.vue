@@ -1,4 +1,5 @@
 <template>
+   <div class="mt-20">
   <div class="m-10 mx-auto max-w-screen-lg overflow-hidden rounded-xl border shadow-lg md:pl-8" style="background-color: #635858;">
     <div class="flex flex-col overflow-hidden bg-white sm:flex-row md:h-80">
       <div class="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-3/5">
@@ -21,5 +22,6 @@
         <img class="h-full w-full object-cover" src="/src/assets/image/logoumkm.png" loading="lazy" />
       </div>
     </div>
+  </div>
   </div>
 </template>

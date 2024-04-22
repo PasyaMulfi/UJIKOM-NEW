@@ -4,7 +4,7 @@
     <article>   
       <header class="mx-auto max-w-screen-xl pt-28 text-center">   
       <p class="text-gray-500">Published April 18, 2024</p> 
-        <h1 class="mt-2 text-3xl font-bold text-gray-900 sm:text-5xl">INFORMASI SEPUTAR UMKM</h1>
+        <h1 class="mt-2 text-3xl font-bold text-gray-900 sm:text-5xl">INFORMASI SEPUTAR UMKM LOKAL</h1>
         <p class="mt-6 text-lg text-gray-700">Mandiri dan Sejahtera</p>
       <div class="mt-6 flex flex-wrap justify-center gap-2" aria-label="Tags">
           <button class="rounded-lg bg-gray-100 px-2 py-1 font-medium text-gray-600 hover:bg-gray-200">Marketing</button>

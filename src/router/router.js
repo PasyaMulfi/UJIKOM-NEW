@@ -19,7 +19,11 @@ import DetailBlogView3 from '../views/DetailBlogView3.vue';
 import DetailBlogView4 from '../views/DetailBlogView4.vue';
 import DetailBlogView5 from '../views/DetailBlogView5.vue';
 import DetailBlogView6 from '../views/DetailBlogView6.vue';
+import DetaileventView1 from '../views/DetaileventView1.vue';
 import tampilan from '../layout/userlayout.vue';
+import DetaileventView2 from '@/views/DetaileventView2.vue';
+import DetaileventView3 from '@/views/DetaileventView3.vue';
+import DataupdateView from '@/views/DataupdateView.vue';
 
 function cekToken(to, from, next) {
   if (!!localStorage.getItem('token') && localStorage.getItem('token') != 'undefined') {
@@ -108,75 +112,57 @@ export const router = createRouter({
           name: 'DetailBlogView6',
           component: DetailBlogView6,
         },
+        {
+          path: '/detailevent1',
+          name: 'Detailevent1',
+          component: DetaileventView1,
+        },
+        {
+          path: '/detailevent2',
+          name: 'Detailevent2',
+          component: DetaileventView2,
+        },
+        {
+          path: '/detailevent3',
+          name: 'Detailevent3',
+          component: DetaileventView3,
+        },
+        {
+          path: '/dataadmin',
+          name: 'Dataupdate',
+          component: DataupdateView,
+        },
       ],
     },
-    {
-      path: '/login',
-      name: 'login',
-      component: LoginView
-    },
+    // {
+    //   path: '',
+    //   name: '',
+    //   component: '',
+    //   children: [
+         
+    //   ]
+    // },
     {
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardView,
       beforeEnter:cekToken
     },
-    // {
-    //   path: '/Kelolakonten',
-    //   name: 'kelolakonten',
-    //   component: KelolaKontenView
-    // },
-    
     {
-      path: '/Kelolaevent',
-      name: 'kelolaEvent',
+      path: '/kelolaevent',
+      name: 'KelolaEvent',
       component: KelolaEventView
     },
-    // {
-    //   path: '/Kelolablog',
-    //   name: 'kelolaBlog',
-    //   component: KelolaBlogView
-    // },
     {
-      path: '/Kelolakontak',
-      name: 'kelolaKontak',
-      component: KelolaKontakView
-    },
+      path: '/kelolablog',
+      name: 'KelolaBlog',
+      component: KelolaBlogView
+  },
     {
-      path: '/blog',
-      name: 'Blog',
-      component: BlogView
+      path: '/login',
+      name: 'login',
+      component: LoginView
     },
-    // {
-    //   path: '/kontak',
-    //   name: 'Kontak',
-    //   component: Kontakview
-    // },
-    // {
-    //   path: '/event',
-    //   name: 'Event',
-    //   component: Eventview
-    // },
-    // {
-    //   path: '/tentangkami',
-    //   name: 'Tentangkami',
-    //   component: Tentangkamiview
-    // },
-    // {
-    //   path: '/detailgaleri1',
-    //   name: 'DetailGaleri1',
-    //   component: DetailGaleriView1,
-    // },
-    // {
-    //   path: '/detailgaleri2',
-    //   name: 'DetailGaleri2',
-    //   component: DetailGaleriView2,
-    // },
-    // {
-    //   path: '/detailgaleri3',
-    //   name: 'DetailGaleri3',
-    //   component: DetailGaleriView3,
-    // }
   ]
 });
 

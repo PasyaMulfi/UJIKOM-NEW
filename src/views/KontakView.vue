@@ -1,4 +1,5 @@
 <template>
+   <div class="mt-20">
     <div class="font-sans text-base text-gray-900 sm:px-10">
   <div class="text-base text-gray-900">
     <div class="mx-auto w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
@@ -7,7 +8,7 @@
         <div class="text-lg sm:text-xl xl:text-xl">
           <div class="text-gray-900">
             <p class="mb-4">TETAP TERHUBUNG DENGAN KAMI</p>
-            -<p>Ada yang bisa kami bantu?</p>
+            <p>Ada yang bisa kami bantu?</p>
           </div>
         </div>
       </div>
@@ -44,5 +45,5 @@
     </div>
   </div>
 </div>
-
+</div>
 </template>
