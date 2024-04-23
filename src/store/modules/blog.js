@@ -17,7 +17,7 @@ export default {
             headers: { "content-type": "application/x-www-form-urlencoded" },
           }
         );
-        commit("SET_BLOG",response);
+        // commit("SET_BLOG",response);
         console.log(response)
       } catch (error) {
         alert(error);
