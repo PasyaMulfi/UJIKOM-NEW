@@ -23,30 +23,18 @@
     <table class="min-w-full border-separate border-spacing-y-2 border-spacing-x-2">
       <thead class="hidden border-b lg:table-header-group">
         <tr class="">
-          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Data Produk</td>
-          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Description</td>
-          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Harga</td>
-          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Stok</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Date</td>
-
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Status</td>
+          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">image</td>
+          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">title</td>
+          <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">content</td>
         </tr>
       </thead>
 
        
-        <tr class="" v-for="product in getProducts" :key="product.id">
-          <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
-            {{ product.nama_produk }}
-            <div class="mt-1 lg:hidden">
-              <p class="font-normal text-gray-500">{{ product.description }}</p>
-              <p class="font-normal text-gray-500">{{ product.harga }}</p>
-              <p class="font-normal text-gray-500">{{ product.stok }}</p>
-            </div>
-          </td>
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ product.description }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ product.harga }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ product.stok }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ product.createdAt }}</td>
+        <tr class="" v-for="artikel in blog">
+          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ artikel.image }}</td>
+          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ artikel.title }}</td>
+          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ artikel.content }}</td>
+          <!-- <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">{{ product.createdAt }}</td> -->
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell"> 
             <div class="flex w-full">
               <a href="#" class="m-2 inline-flex items-center justify-center rounded-xl border border-transparent bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700">Edit</a>
@@ -57,58 +45,18 @@
     </table>
   </div>
 </div>
-
 </div>
 </template>
+
+
 <script>
-  import { mapGetters, mapActions } from 'vuex';
-
-
-
+import { mapGetters,mapState, mapActions } from 'vuex';
 export default {
-  data() {
-    return {
-      tambahProduct: {
-        nama_produk: "",
-        description: "",  
-        harga: "",
-        stok: "",
-      },
-      tambahProduct: {},
-    }
-  },
 computed: {
-  ...mapGetters('product', ['getProducts']),
+  ...mapState('blog', ['blog']),
 },
-methods: {
-  ...mapActions('product', ['fetchPrdouct', 'updateProduct']),
-  async updateProducts() {
-  // Lakukan validasi input pengguna yang diubah sebelum mengirim permintaan PUT
-    try {
-      // Panggil action updateUserData dengan data pengguna yang diubah
-      await this.updateProduct(this.editedUser);
-      // Tutup modal setelah berhasil mengubah pengguna
-// Panggil closeEditModal di sini
-      // Tampilkan pesan sukses menggunakan Swal.fire
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "User updated successfully",
-        showConfirmButton: false,
-        timer: 1500
-      });
-    } catch (error) {
-      console.error('Error updating user:', error);
-      // Set pesan kesalahan jika terjadi kesalahan saat mengubah pengguna
-      this.errorMessage = 'Failed to update user. Please try again.';
-    }
-},
-  
-},
-
 mounted() {
-  this.fetchPrdouct();
-
+  this.$store.dispatch("blog/fectBlog");
 },
 }
 </script>

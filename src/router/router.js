@@ -24,6 +24,8 @@ import tampilan from '../layout/userlayout.vue';
 import DetaileventView2 from '@/views/DetaileventView2.vue';
 import DetaileventView3 from '@/views/DetaileventView3.vue';
 import DataupdateView from '@/views/DataupdateView.vue';
+import KeloladepaneventView from '@/views/KeloladepaneventView.vue';
+import KeloladepanblogView from '@/views/KeloladepanblogView.vue';
 
 function cekToken(to, from, next) {
   if (!!localStorage.getItem('token') && localStorage.getItem('token') != 'undefined') {
@@ -132,6 +134,26 @@ export const router = createRouter({
           name: 'Dataupdate',
           component: DataupdateView,
         },
+        {
+          path: '/kelolaevent',
+          name: 'KelolaEvent',
+          component: KelolaEventView
+        },
+        {
+          path: '/kelolablog',
+          name: 'KelolaBlog',
+          component: KelolaBlogView
+      },
+      {
+        path: '/keloladepanevent',
+        name: 'Keloladepanevent',
+        component: KeloladepaneventView
+    },
+    {
+      path: '/keloladepanblog',
+      name: 'Keloladepanblog',
+      component: KeloladepanblogView
+  },
       ],
     },
     // {
@@ -148,16 +170,7 @@ export const router = createRouter({
       component: DashboardView,
       beforeEnter:cekToken
     },
-    {
-      path: '/kelolaevent',
-      name: 'KelolaEvent',
-      component: KelolaEventView
-    },
-    {
-      path: '/kelolablog',
-      name: 'KelolaBlog',
-      component: KelolaBlogView
-  },
+
     {
       path: '/login',
       name: 'login',

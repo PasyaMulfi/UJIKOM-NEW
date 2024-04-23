@@ -1,4 +1,5 @@
 <template>
+  <div class="mt-20">
 <div class="my-4 max-w-screen-md border px-4 shadow-xl sm:mx-4 sm:rounded-xl sm:px-4 sm:py-4 md:mx-auto">
   <div class="flex flex-col border-b py-4 sm:flex-row sm:items-start">
     <div class="shrink-0 mr-auto sm:py-3">
@@ -33,5 +34,5 @@
     <button class="rounded-lg border-2 border-transparent bg-blue-600 px-4 py-2 font-medium text-white focus:outline-none focus:ring hover:bg-blue-700">Save</button>
   </div>
 </div>
-
+</div>
 </template>
