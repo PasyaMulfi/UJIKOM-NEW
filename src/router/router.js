@@ -1,18 +1,17 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import DashboardView from '../views/DashboardView.vue';
 import LoginView from '../views/LoginView.vue';
 import BerandaView from '../views/BerandaView.vue';
-import KelolaTentangkamiView from '../views/KelolaTentangkamiView.vue';
+// import KelolaTentangkamiView from '../views/admin/'
 import KelolaEventView from '../views/KelolaEventView.vue';
 import KelolaBlogView from '../views/KelolaBlogView.vue';
-import KelolaKontakView from '../views/KelolaKontakView.vue';
+// import KelolaKontakView from '../views/admin/';
 import BlogView from '../views/BlogView.vue';
 import Kontakview from '../views/KontakView.vue';
 import Eventview from '../views/EventView.vue';
 import Tentangkamiview from '../views/TentangkamiView.vue';
-import DetailGaleriView1 from '../views/DetailGaleriView1.vue';
-import DetailGaleriView2 from '../views/DetailGaleriView2.vue';
-import DetailGaleriView3 from '../views/DetailGaleriView3.vue'
+// import DetailGaleriView1 from '../views/DetailGaleriView1.vue';
+// import DetailGaleriView2 from '../views/DetailGaleriView2.vue';
+// import DetailGaleriView3 from '../views/DetailGaleriView3.vue'
 import DetaiBlogView1 from '../views/DetaiBlogView1.vue';
 import DetailBlogView2 from '../views/DetailBlogView2.vue';
 import DetailBlogView3 from '../views/DetailBlogView3.vue';
@@ -26,6 +25,10 @@ import DetaileventView3 from '@/views/DetaileventView3.vue';
 import DataupdateView from '@/views/DataupdateView.vue';
 import KeloladepaneventView from '@/views/KeloladepaneventView.vue';
 import KeloladepanblogView from '@/views/KeloladepanblogView.vue';
+import KelolagaleriView from '../views/KelolagaleriView.vue'
+import DashboardView from '../views/DashboardView.vue';
+import tabel from '../views/admin/tabel.vue';
+import layoutadmin from '../layout/layoutadmin.vue';
 
 function cekToken(to, from, next) {
   if (!!localStorage.getItem('token') && localStorage.getItem('token') != 'undefined') {
@@ -68,21 +71,6 @@ export const router = createRouter({
           path: '/kontak',
           name: 'KontakView',
           component: Kontakview
-        },
-        {
-          path: '/detailgaleri1',
-          name: 'DetailGaleriView1',
-          component: DetailGaleriView1,
-        },
-        {
-          path: '/detailgaleri2',
-          name: 'DetailGaleriView2',
-          component: DetailGaleriView2,
-        },
-        {
-          path: '/detailgaleri3',
-          name: 'DetailGaleriView3',
-          component: DetailGaleriView3,
         },
         {
           path: '/detailblog1',
@@ -129,44 +117,50 @@ export const router = createRouter({
           name: 'Detailevent3',
           component: DetaileventView3,
         },
-        {
-          path: '/dataadmin',
-          name: 'Dataupdate',
-          component: DataupdateView,
-        },
-        {
-          path: '/kelolaevent',
-          name: 'KelolaEvent',
-          component: KelolaEventView
-        },
-        {
-          path: '/kelolablog',
-          name: 'KelolaBlog',
-          component: KelolaBlogView
-      },
-      {
-        path: '/keloladepanevent',
-        name: 'Keloladepanevent',
-        component: KeloladepaneventView
-    },
-    {
-      path: '/keloladepanblog',
-      name: 'Keloladepanblog',
-      component: KeloladepanblogView
-  },
+       
       ],
     },
-    // {
-    //   path: '',
-    //   name: '',
-    //   component: '',
-    //   children: [
-         
-    //   ]
-    // },
+    {
+      path: '/admin',
+      name: 'tabel',
+      component: tabel
+    },
+    {
+      path: '/admin',
+      name: 'layoutadmin',  
+      component: layoutadmin,
+      children: [
+       
+      ],
+    },
+    {
+      path: '/dataadmin',
+      name: 'Dataupdate',
+      component: DataupdateView,
+    },
+    {
+      path: '/kelolaevent',
+      name: 'KelolaEvent',
+      component: KelolaEventView
+    },
+    {
+      path: '/kelolablog',
+      name: 'KelolaBlog',
+      component: KelolaBlogView
+  },
+  {
+    path: '/keloladepanevent',
+    name: 'Keloladepanevent',
+    component: KeloladepaneventView
+},
+{
+  path: '/keloladepanblog',
+  name: 'Keloladepanblog',
+  component: KeloladepanblogView
+},
     {
       path: '/dashboard',
-      name: 'dashboard',
+      name: 'Dashboard',
       component: DashboardView,
       beforeEnter:cekToken
     },
@@ -176,6 +170,11 @@ export const router = createRouter({
       name: 'login',
       component: LoginView
     },
+    {
+      path: '/kelolagaleri',
+      name: 'Kelolagaleri',
+      component: KelolagaleriView
+    }
   ]
 });
 
