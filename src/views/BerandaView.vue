@@ -1,6 +1,5 @@
   <template>
-    
-    <!-- <main>
+     <main>
       <article>   
         <header class="mx-auto max-w-screen-xl pt-28 text-center">   
         <p class="text-gray-500">Published April 18, 2024</p> 
@@ -27,33 +26,43 @@
       <div class="h-0.5 w-2 bg-gray-600"></div>
       <div class="h-0.5 w-32 bg-gray-600"></div>
       <div class="h-0.5 w-2 bg-gray-600"></div>
-    </div> -->
+    </div>
     
   <aside aria-label="Related Articles" class="mx-auto mt-10 max-w-screen-xl py-20">
     <h2 class="mb-8 text-center text-5xl font-bold text-gray-900">GALERI SAHABAT UMKM</h2>
     <div class="mx-auto grid max-w-screen-lg justify-center px-4 sm:grid-cols-2 sm:gap-6 sm:px-8 md:grid-cols-3">
-      <!-- Your articles will be displayed here -->
-      <article v-for="(item, index) in galeri" :key="index" class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
-        <a :href="item.link">
+      <div v-for="item in getGaleri.response" :key="item.id" class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
+        <img :src="item.image" clxass="h-56 w-full object-cover" :alt="item.title" />
+        <h1>{{ item.judul }}</h1>
+        <h2>{{ item.title }}</h2>
+      <p class="mb-4 text-base font-light">{{ item.content }}</p>
+            <span class="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">Read Now</span>
+
+      </div>
+      <!-- <article v-for="item in getGaleri.response" :key="item.id" class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
+
           <img :src="item.image" class="h-56 w-full object-cover" :alt="item.title" />
           <div class="flex-auto px-6 py-5">
             <span class="mb-2 flex items-center text-sm font-semibold">
-              <!-- Kategori galeri -->
+           
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
               </svg>
-              {{ item.category }}
             </span>
-            <router-link :to="item.link" class="mt-4 mb-3 text-xl font-semibold xl:text-2xl">{{ item.title }}</router-link>
-            <!-- Deskripsi galeri -->
+
+            <div class="mb-4">
+              <img :src="item.image" alt="" srcset="">
+            <label for="image" class="block text-sm font-medium text-gray-700">URL image</label>
+            </div>
+
+         
             <p class="mb-4 text-base font-light">{{ item.content }}</p>
             <span class="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">Read Now</span>
           </div>
-        </a>
-      </article>
+      </article> -->
 
       <!-- Galeri placeholder articles -->
-      <!-- <article class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
+       <!-- <article class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
         <a href="#">
           <img src="https://sahabatumkm.id/wp-content/uploads/2023/07/business-partners-handshake-global-corporate-with-technology-concept-696x464-1.jpeg" class="h-56 w-full object-cover" alt="" />
           <div class="flex-auto px-6 py-5">
@@ -68,9 +77,9 @@
             <span class="inline-block cursor-pointer select-none rounded-full border border-gray-800 bg-gray-800 px-2 py-1 text-center align-middle text-sm font-semibold leading-normal text-white no-underline shadow-sm">Read Now</span>
           </div>
         </a>
-      </article>
+      </article> -->
 
-      <article class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
+      <!-- <article class="mx-auto my-4 flex flex-col overflow-hidden rounded-lg border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg">
         <a href="#">
           <img src="https://sahabatumkm.id/wp-content/uploads/2023/07/bulb-with-speecch-bubbles.jpg" class="h-56 w-full object-cover" alt="" />
           <div class="flex-auto px-6 py-5">
@@ -88,6 +97,7 @@
       </article> -->
     </div>
   </aside>
+  <!-- {{ galeri }} -->
 </template>
 
 <style>
@@ -96,3 +106,31 @@
     background: linear-gradient(180deg, rgba(18, 18, 61, 1) 0%, rgb(73, 73, 124) 100%);
   }
 </style>
+
+<script>
+import { mapGetters, mapActions } from 'vuex';
+
+export default {
+  data() {
+      return {
+        formData: {
+          image: ''
+        }
+      };
+    },
+    computed: {
+        ...mapGetters('galeri', ['getGaleri']),
+        galeri(){
+          return this.getGaleri || 'kosong';
+        }
+    },
+    methods: {
+        ...mapActions('galeri', ['fectGaleri']),
+
+    },
+    mounted() {
+        this.fectGaleri()
+    },
+}
+</script>
+

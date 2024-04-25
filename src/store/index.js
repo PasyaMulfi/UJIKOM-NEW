@@ -3,6 +3,7 @@ import auth from './modules/auth';
 import blog from './modules/blog';
 import event from './modules/event';
 import depanevent from './modules/depanevent';
+import galeri from './modules/galeri';
 
 const store = createStore({
     state: {
@@ -12,8 +13,8 @@ const store = createStore({
       auth,
       blog,
       event,
-      depanevent
-      
+      depanevent,
+      galeri
     },
   });
   

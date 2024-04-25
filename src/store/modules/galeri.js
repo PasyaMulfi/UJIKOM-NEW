@@ -1,5 +1,6 @@
 import axios from "axios";
-export default {
+
+const galeri = {
   namespaced: true,
   state: {
     galeri: [],
@@ -25,12 +26,17 @@ export default {
     },
     async fectGaleri({ commit }) {
         try {
-          const datakelas = await axios.get(
+          const response = await axios.get(
             "http://localhost:3000/api/v1/galeri"
           );
-          commit("SET_GALERI", datakelas.data.data["data"]);
+          const formattedResponse = {
+            message: "success fetch data galeri",
+            response: response.data
+          };
+          commit("SET_GALERI", formattedResponse.response);
+          return formattedResponse;
         } catch (error) {
-          alert("Ada error");
+          alert("There was an error");
           console.log(error);
         }
       },
@@ -41,3 +47,5 @@ export default {
     },
   },
 };
+
+export default galeri;

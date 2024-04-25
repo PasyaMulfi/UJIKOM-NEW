@@ -70,11 +70,12 @@ export default {
     }
   },
   methods: {
-    ...mapActions("galeri", ["fectgaleriadd"]),
-    createGaleri() {
-      this.fectgaleriadd(this.data);
-      this.$router.push({ name: 'dataadmin' });
-    }
-  },
+  ...mapActions("galeri", ["fectgaleriadd"]),
+  createGaleri() {
+    this.fectgaleriadd(this.data);
+    this.$router.push({ name: 'dataadmin' });
+  }
+},
+
 };
 </script>
